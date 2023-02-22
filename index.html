@@ -22,6 +22,60 @@
     <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.js"></script>
     <title>Visit Uttarakhand</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        .container .card
+        {
+            max-width: 300px;
+            height: 215px;
+            margin: 30px 10px;
+            padding: 20px 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+            transition: 0.3s ease-in-out;
+        }
+        .container .card:hover
+        {
+            height: 380px;
+        }
+        .card .container .imgContainer
+        {
+            position: relative;
+            width:250px;
+            height:250px;
+            top:-50px;
+            left:10px;
+            z-index: 1;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        .container .card .imgContainer img
+        {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+        .container .card .content
+        {
+            position: relative;
+            margin-top: -140px;
+            padding: 10px 15px;
+            text-align: center;
+            color:#111;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s ease-in-out;
+        }
+        .container .card:hover .content
+        {
+            visibility: visible;
+            opacity: 1;
+            margin-top: -40px;
+            transition-delay: 0.3s;
+        }
+
+        @media (max-width: 330px){
+            .container .card .imgContainer{
+                left: -2px;
+            }
+        }
         .button {
             border-radius: 4px;
             background-color:rgb(0, 210, 144);
@@ -73,8 +127,8 @@
             margin-top: 50px;
             width: 100%;
             min-height: 100vh;
-            background-color:blanchedalmond;
-            padding-top: 10px;
+            background-color:rgb(166, 216, 119);
+            /* padding-bottom: 20px; */
         }
         .containers {
             width: 80%;
@@ -148,6 +202,14 @@
             height:600px;
             width: fit-content;
         }
+        .h2title{
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+            font-family: 'Montserrat', sans-serif;
+            color: brown;
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body>
@@ -169,10 +231,10 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item list-item">
-                    <a class="nav-link" href="#">Explore</a>
+                    <a class="nav-link" href="spiritual.html">Explore</a>
                 </li>
                 <li class="nav-item list-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="#aboutus">About Us</a>
                 </li>
                 <li class="nav-item list-item">
                     <a class="nav-link" href="#">Contact Us</a>
@@ -248,9 +310,9 @@
       <section>
         <div class="row justify-content-center" style="margin-left: 80px; margin-right: 80px;">
             <div class="col-md-3">
-                <div class="card shadow" style="width: 16rem;">
+                <div class="card shadow zoom" style="width: 16rem;">
                     <div class="inner">
-                        <img class="zoom" src="images/Mussoorie.jpg" alt="..." height="170px" >
+                        <img src="images/Mussoorie.jpg" alt="..." height="170px" >
                     </div>
                     <div class="card-body text-left">
                         <h5 class="card-title">Mussorie</h5>
@@ -261,9 +323,9 @@
             </div>
 
             <div class="col-md-3">
-                <div class="card shadow" style="width: 16rem;">
+                <div class="card shadow zoom" style="width: 16rem;">
                     <div class="inner">
-                        <img class="zoom" src="images/chopta.jpg" alt="..." height="170px" width="255px" >
+                        <img src="images/chopta.jpg" alt="..." height="170px" width="255px" >
                     </div>
                     <div class="card-body text-left">
                         <h5 class="card-title">Chopta Tungnath</h5>
@@ -274,9 +336,9 @@
             </div>
 
             <div class="col-md-3">
-                <div class="card shadow" style="width: 16rem;">
+                <div class="card shadow zoom" style="width: 16rem;">
                     <div class="inner">
-                        <img class="zoom" src="images/Nainital.jpg" alt="..." height="168px" >
+                        <img src="images/Nainital.jpg" alt="..." height="168px" >
                     </div>
                     <div class="card-body text-left">
                         <h5 class="card-title">Nainital</h5>
@@ -287,9 +349,9 @@
             </div>
 
             <div class="col-md-3">
-                <div class="card shadow" style="width: 16rem;">
+                <div class="card shadow zoom" style="width: 16rem;">
                     <div class="inner">
-                        <img class="zoom" src="images/Haridwar.jpg" alt="..." height="170px"  >
+                        <img src="images/Haridwar.jpg" alt="..." height="170px"  >
                     </div>
                     <div class="card-body text-left">
                         <h5 class="card-title">Haridwar</h5>
@@ -301,12 +363,58 @@
 
         </div>
       </section>
-      
+
+
+      <!-- <div class="container d-flex align-items-center justify-content-center position-relative flex-wrap">
+        <div class="card d-flex position-relative flex-column">
+            <div class='imgContainer'>
+                <img src="images/Mussoorie.jpg" alt="...">
+            </div>
+            <div class="content">
+                <h5 class="card-title">Mussorie</h5>
+                    <p class="card-text">Mussoorie, also known as <strong>Queen of the Hills</strong>,  is famous for its scenic beauty, good social life and entertainment.</p>
+                    <a href="#" class="btn btn-secondary">Know More</a>
+            </div>
+        </div>
+
+        <div class="card d-flex position-relative flex-column">
+            <div class='imgContainer'>
+                <img src="images/Mussoorie.jpg" alt="...">
+            </div>
+            <div class="content">
+                <h5 class="card-title">Mussorie</h5>
+                    <p class="card-text">Mussoorie, also known as <strong>Queen of the Hills</strong>,  is famous for its scenic beauty, good social life and entertainment.</p>
+                    <a href="#" class="btn btn-secondary">Know More</a>
+            </div>
+        </div>
+
+        <div class="card d-flex position-relative flex-column">
+            <div class='imgContainer'>
+                <img src="images/Mussoorie.jpg" alt="...">
+            </div>
+            <div class="content">
+                <h5 class="card-title">Mussorie</h5>
+                    <p class="card-text">Mussoorie, also known as <strong>Queen of the Hills</strong>,  is famous for its scenic beauty, good social life and entertainment.</p>
+                    <a href="#" class="btn btn-secondary">Know More</a>
+            </div>
+        </div>
+        <div class="card d-flex position-relative flex-column">
+            <div class='imgContainer'>
+                <img src="images/Mussoorie.jpg" alt="...">
+            </div>
+            <div class="content">
+                <h5 class="card-title">Mussorie</h5>
+                    <p class="card-text">Mussoorie, also known as <strong>Queen of the Hills</strong>,  is famous for its scenic beauty, good social life and entertainment.</p>
+                    <a href="#" class="btn btn-secondary">Know More</a>
+            </div>
+        </div> -->
+
+
       <section class="section">
         <div class="containers">
             <div class="content-section">
                 <div class="title">
-                    <h2>About Us</h2>
+                    <h2 class="h2title">About Us</h2>
                 </div>
 
                 <div class="content">
