@@ -21,6 +21,28 @@
     <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.js"></script>
 
     <style>
+        .nav-link {
+            box-shadow: inset 0 0 0 0 #54b3d6;
+            color: #54b3d6;
+            padding: 0 .25rem;
+            transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        .nav-link:hover {
+            color: #54b3d6;
+            box-shadow: inset 200px 0 0 0 #54b3d6;;
+        }
+
+        /* Presentational styles */
+        .nav-link {
+            color: #54b3d6;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.5;
+            text-decoration:none;
+        }
         .search-click {
             border: 1px solid #ccc;
             outline: none;
@@ -31,25 +53,6 @@
             height: 50px;
             padding: 25px;
             transition: all 0.5s;
-            }
-        .search-click:focus {
-            width: 300px;
-            padding-left: 50px;
-        }
-        .search-click {
-            position: relative;
-            overflow: hidden;
-            height: 50px;
-        }
-        .search-click input {
-            background: transparent;
-            border: 1px solid #ccc;
-            outline: none;
-            position: absolute;
-            width: 200px;
-            height: 50px;
-            left: 0%;
-            padding: 10px;
         }
         /* The grid: Four equal columns that floats next to each other */
         .column {
@@ -176,53 +179,69 @@
             margin-bottom: 50px;
         }
         .visit{
-            font-family: 'Montserrat', sans-serif;
-            font-family: 'Sacramento', cursive;
-            color:#70bfff
+            margin-left: 40px;
+            display: inline;            
+            font-family: "Satisfy", sans-serif;
+            color:rgb(144, 37, 37);
             
         }
         .utt{
-            font-family: 'Julee', cursive;
-            font-family: 'Satisfy', cursive;
-            color:rgb(182, 210, 255);
+            font-family: "Satisfy", sans-serif;
+            color:#8b4d1e;
+        }
+        .navbar{
+            color: #0f764e !important;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        .list-item{
+            margin-left: 30px;
         }
     </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#" style="margin-left: 30px;">
-            <h1 class="visit" style="display: inline; margin-right:200px ;"> visit</h1>
-            <!-- <h1 class="utt"> Uttarakhand</h1> -->
-            <img src="images/uttarakhand.png" width="100" height="80" class="d-inline-block align-top" alt="">
-            <h1 class="utt" style="margin-right:0px; padding-right:0px"> Uttarakhand</h1>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+          <div class="container-fluid">
+            <!-- Navbar brand -->
+            <a class="navbar-brand nav-link" target="_blank" href="index.html">
+                 <h3 class="visit"> visit</h3>
+                 <h3 class="utt"> Uttarakhand</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
+              aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+            </button>
+            <img src="images/uttarakhand.png" width="100" height="70" style="margin-bottom:20px" class="d-inline-block align-top" alt="">
             
-        </a>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" area aria-controls="navbarNav" area-expanded="false" area-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <div class="collapse navbar-collapse" id="navbarExample01" style="margin-left:350px">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item list-item active">
+                  <a class="nav-link" style="color:#09412c" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item list-item">
+                    <a class="nav-link" style="color:#09412c" href="spiritual.html">Explore</a>
+                </li>
+                <li class="nav-item list-item">
+                    <a class="nav-link" style="color:#09412c" href="#aboutus">About Us</a>
+                </li>
+                <li class="nav-item list-item">
+                    <a class="nav-link" style="color:#09412c" href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <a href="#" class="btn btn-primary" style="margin-bottom: 20px;">Log In</a>
+          </div>
+          
+          <div>
+            <img src="images/spiritual_home.jpg" alt="" height="587px" width="100%">
+          </div>
 
-        <div class="container-fluid">
-            <ul class="navbar-nav ml-auto" style="margin-left: 250px; float: left;">
-                <li class="nav-item list-item" style="margin-right:30px">
-                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item list-item" style="margin-right:30px">
-                    <a class="nav-link active" href="spiritual.html">Explore</a>
-                </li>
-                <li class="nav-item list-item" style="margin-right:30px">
-                    <a class="nav-link" href="#">About Us</a>
-                </li>
-                <li class="nav-item list-item" style="margin-right:30px">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto" style="margin-right: 150px; float: right;"">
-                <input type="text" class="search-click" name="" placeholder="type to search ..." />
-            </ul>
-            <a href="#" class="btn btn-primary">Log In</a>
-        </div>
-    </nav>
+        </nav>
+        
+      </header>
 
 
     <section class="section">
