@@ -158,11 +158,13 @@
             text-align: center;
         }
         .gallary{
-            background-image: url(images/social-media-background-image.jpg);
+            background-image: url(images/religious-bg.jpg);
             height:100%;
             background-position: center;
             background-repeat:no-repeat;
             background-size: cover;
+            background-attachment: fixed; 
+            background-position: center;
              /* Add the blur effect */
             /* filter: blur(8px);
             -webkit-filter: blur(8px); */
@@ -239,13 +241,22 @@
             filter: drop-shadow(0 0 0.75rem crimson);
             filter: brightness(2);
         }
+        .headerbg{
+            width: 100%;
+            min-height: 70vh;
+            background-image: url(images/religious-bg.jpg);
+            height:100%;
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
     </style>
 </head>
 <body>
 
     <header>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
+        <nav class="photo navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
           <div class="container-fluid">
             <!-- Navbar brand -->
             <a class="navbar-brand nav-link" target="_blank" href="index.html">
@@ -456,8 +467,8 @@
 
     <section class="gallary">
         <div class="row justify-content-center scroll" style="margin-left: 30px; margin-right: 30px; text-align: center;">
-            <h2 class="h2title" style="color:brown;">Some Other Popular Religious Destinations</h2>
-            <h6><strong>Click on the images below:</strong></h6>
+            <h2 class="h2title" style="color:rgb(255, 255, 255);">Some Other Popular Religious Destinations</h2>
+            <h6 style="color:white"><strong>Click on the images below:</strong></h6>
         </div>
         
         <!-- <div class="bg-text"> -->
