@@ -186,7 +186,77 @@
             display: table;
             clear: both;
         }
+        .form-popup {
+            display: none;
+            position: fixed;
+            top: 100px;
+            right:15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+      }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text], .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .buttonn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom:10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            margin-left:30px;
+            background-color: rgb(0, 0, 0);
+            height:10px;
+            width:10%;
+            color:rgb(255, 255, 255);
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .button:hover, .open-button:hover {
+            opacity: 1;
+        }
         
+        .verdanainfo{
+            line-height: 1.5em;
+            font-size: 16px; 
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .insidedata{
+            color:rgb(156, 176, 160); 
+            line-height:1.7em; font-size:17px; 
+            font-family:'IBM Plex Sans',sans-serif;
+        }
+        .insidedata:hover{
+            filter: drop-shadow(0 0 0.75rem rgb(13, 198, 47));
+            /* filter: brightness(1); */
+        }
     </style>
 </head>
 <body>
@@ -217,14 +287,29 @@
                     <a class="nav-link" style="color:#09412c" href="adventure.html">Adventures</a>
                 </li>
                 <li class="nav-item list-item">
-                    <a class="nav-link" style="color:#09412c" href="index.html#aboutu">About Us</a>
+                    <a class="nav-link" style="color:#09412c" href="index.html#aboutus">About Us</a>
                 </li>
                 <li class="nav-item list-item">
                     <a class="nav-link" style="color:#09412c" href="contactUs.html">Contact Us</a>
                 </li>
               </ul>
             </div>
-            <a href="#" class="btn btn-primary" style="margin-bottom: 20px;">Log In</a>
+            <button href="#" class="btn btn-primary" style="margin-bottom: 20px;"  onclick="openForm()">Log In</button>
+            
+            <div class="form-popup" id="myForm">
+              <form action="/action_page.php" class="form-container">
+                <button style="display: inline;float:right;" type="button" class="btn btn-outline-dark" onclick="closeForm()">X</button>
+                <h2>Login</h2>
+                
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            
+                <a type="submit" class="buttonn" href="#" style="text-decoration: none;">Login</a>
+              </form>
+            </div>
           </div>
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="6000">
             <ol class="carousel-indicators">
@@ -286,7 +371,7 @@
       <section class="section">
         <h2 class="h2title">Feel the Thrill</h2>
         <div class="Cssection">
-            <p>
+            <p class="verdanainfo">
                 Uttarakhand is the ultimate adventure destination and the answer to all your thrill-seeking woes lies here. Bestowed with snow-carpeted slopes
                 ideal for high-altitude skiing; the Himalayan ranges for trekking, mountaineering and rock climbing; gurgling rivers for white water rafting, pristine 
                 lakes for canoeing and kayaking, and mountain paths best suited for biking challenges - there is no dearth of adventure sports here.
@@ -305,12 +390,12 @@
         <div class="content">
             <img class="adventureimg" src="images/paragliding.jpg" alt="paragliding" height="450px">
             <p class="infoblock">
-                <p><strong>Location</strong>: Mukteswar and Ranikhet</p>
-                <p><strong>Starts from</strong>: INR 1,500 to 3,000</p>
-                <p><strong>Best time</strong>: January to March</p>
+                <p class="verdanainfo"><strong>Location</strong>: Mukteswar and Ranikhet</p>
+                <p class="verdanainfo"><strong>Starts from</strong>: INR 1,500 to 3,000</p>
+                <p class="verdanainfo"><strong>Best time</strong>: January to March</p>
             </p>
             <div class="Csection">    
-                <p style="background-image: url(images/kuchtohai.jpg);
+                <p class="insidedata" style="background-image: url(images/kuchtohai.jpg);
                 background-position: center;
                 background-repeat:no-repeat;
                 background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
@@ -333,12 +418,12 @@
         <div class="content">:
             <img class="adventureimg" src="images/rafting-content.jpeg" alt="paragliding" height="450px">
             <p class="infoblock">
-                <p><strong>Location</strong>: Rishikesh</p>
-                <p><strong>Starts from</strong>: INR 700 to 2,000</p>
-                <p><strong>Best time</strong>: Before Monsoon(July-August)</p>
+                <p class="verdanainfo"><strong>Location</strong>: Rishikesh</p>
+                <p class="verdanainfo"><strong>Starts from</strong>: INR 700 to 2,000</p>
+                <p class="verdanainfo"><strong>Best time</strong>: Before Monsoon(July-August)</p>
             </p>
             <div class="Csection">    
-                <p style="background-image: url(images/kuchtohai.jpg);
+                <p class="insidedata" style="background-image: url(images/kuchtohai.jpg);
                 background-position: center;
                 background-repeat:no-repeat;
                 background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
@@ -359,12 +444,12 @@
         <div class="content">:
             <img class="adventureimg" src="images/skiing-content.jpg" alt="paragliding" height="450px">
             <p class="infoblock">
-                <p><strong>Location</strong>: Auli, Dayara bugyal and Munsyari</p>
-                <p><strong>Starts from</strong>: INR 900 to 2,000</p>
-                <p><strong>Best time</strong>: November to February</p>
+                <p class="verdanainfo"><strong>Location</strong>: Auli, Dayara bugyal and Munsyari</p>
+                <p class="verdanainfo"><strong>Starts from</strong>: INR 900 to 2,000</p>
+                <p class="verdanainfo"><strong>Best time</strong>: November to February</p>
             </p>
             <div class="Csection">    
-                <p style="background-image: url(images/kuchtohai.jpg);
+                <p class="insidedata" style="background-image: url(images/kuchtohai.jpg);
                 background-position: center;
                 background-repeat:no-repeat;
                 background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
@@ -386,12 +471,12 @@
         <div class="content">:
             <img class="adventureimg" src="images/mountain-biking.jpg" alt="paragliding" height="450px">
             <p class="infoblock">
-                <p><strong>Location</strong>: Mussorie, Khirsu, Nainital, Sattal</p>
-                <p><strong>Starts from</strong>: INR 1000 to 2,000</p>
-                <p><strong>Best time</strong>: All over the year</p>
+                <p class="verdanainfo"><strong>Location</strong>: Mussorie, Khirsu, Nainital, Sattal</p>
+                <p class="verdanainfo"><strong>Starts from</strong>: INR 1000 to 2,000</p>
+                <p class="verdanainfo"><strong>Best time</strong>: All over the year</p>
             </p>
             <div class="Csection">    
-                <p style="background-image: url(images/kuchtohai.jpg);
+                <p class="insidedata" style="background-image: url(images/kuchtohai.jpg);
                 background-position: center;
                 background-repeat:no-repeat;
                 background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
@@ -412,12 +497,12 @@
         <div class="content">:
             <img class="adventureimg" src="images/trek.pg.jpg" alt="paragliding" height="450px">
             <p class="infoblock">
-                <p><strong>Location</strong>: Bedni Bugyal, Kauri Pass, Har ki Dun, Deoriatal-Chandrashila, Dodital, Roop Kund, Hem Kund</p>
-                <p><strong>Starts from</strong>: INR 1200 to 3,000</p>
-                <p><strong>Best time</strong>: Allmost All Seasons</p>
+                <p class="verdanainfo"><strong>Location</strong>: Bedni Bugyal, Kauri Pass, Har ki Dun, Deoriatal-Chandrashila, Dodital, Roop Kund, Hem Kund</p>
+                <p class="verdanainfo"><strong>Starts from</strong>: INR 1200 to 3,000</p>
+                <p class="verdanainfo"><strong>Best time</strong>: Allmost All Seasons</p>
             </p>
             <div class="Csection">    
-                <p style="background-image: url(images/kuchtohai.jpg);
+                <p class="insidedata" style="background-image: url(images/kuchtohai.jpg);
                 background-position: center;
                 background-repeat:no-repeat;
                 background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
@@ -431,6 +516,8 @@
             </div>
         </div>
       </section>
+
+      
 
       <section class="gallary" style="background-attachment: fixed; background-position: center">
         <div class="row justify-content-center scroll" style="margin-left: 30px; margin-right: 30px; text-align: center;">
@@ -467,6 +554,14 @@
           imgText.innerHTML = imgs.alt;
           expandImg.parentElement.style.display = "block";
         }
+
+        function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
     </script>
 </body>
 </html>

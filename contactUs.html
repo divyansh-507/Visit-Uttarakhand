@@ -188,6 +188,62 @@
             color: rgb(0, 0, 0);
             margin-bottom: 30px;
         }
+        .form-popup {
+            display: none;
+            position: fixed;
+            top: 100px;
+            right:15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+      }
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .buttonn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  margin-left:30px;
+  background-color: rgb(0, 0, 0);
+  height:10px;
+  width:10%;
+  color:rgb(255, 255, 255);
+}
+
+/* Add some hover effects to buttons */
+.form-container .button:hover, .open-button:hover {
+  opacity: 1;
+}
     </style>
 </head>
 <body>
@@ -218,14 +274,29 @@
                     <a class="nav-link" style="color:#09412c" href="adventure.html">Adventures</a>
                 </li>
                 <li class="nav-item list-item">
-                    <a class="nav-link" style="color:#09412c" href="index.html#aboutu">About Us</a>
+                    <a class="nav-link" style="color:#09412c" href="index.html#aboutus">About Us</a>
                 </li>
                 <li class="nav-item list-item">
                     <a class="nav-link" style="color:#09412c" href="#">Contact Us</a>
                 </li>
               </ul>
             </div>
-            <a href="#" class="btn btn-primary" style="margin-bottom: 20px;">Log In</a>
+            <button href="#" class="btn btn-primary" style="margin-bottom: 20px;"  onclick="openForm()">Log In</button>
+            
+            <div class="form-popup" id="myForm">
+              <form action="/action_page.php" class="form-container">
+                <button style="display: inline;float:right;" type="button" class="btn btn-outline-dark" onclick="closeForm()">X</button>
+                <h2>Login</h2>
+                
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            
+                <a type="submit" class="buttonn" href="#" style="text-decoration: none;">Login</a>
+              </form>
+            </div>
           </div>
         </nav>
 
@@ -281,5 +352,63 @@
             
         </div>
     </section>
+
+    <div class="container my-5">
+
+        <footer class="text-black  text-lg-start bg-light">
+        
+        <div class="container p-4">
+        <div class="row mt-4">
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase mb-4">Insights</h5>
+            <p>
+                Travel and Explore. It makes you happier and provides peace of mind.
+            </p>
+    
+            <p>
+                Visit our website and have a great time visiting Uttarakhand and feeling its scenic beauty.
+            </p>
+    
+            <div class="mt-4">
+                <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-facebook-f"></i></a>
+                <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-dribbble"></i></a>
+                <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-twitter"></i></a>
+                <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-google-plus-g"></i></a>
+            </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0" style="margin-left: 1.50em">
+            <h5 class="text-uppercase mb-4"><a href="contactUs.html" style="color:black;margin-left:40px">Contact US</a></h5>
+            <ul class="fa-ul" style="margin-left: 1.65em; margin-top: 20px;">
+                <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Dehradun 248002, India</span>
+                </li>
+                <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">visituttarakhand@gmail.com</span>
+                </li>
+                <li class="mb-3">
+                <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 998 124 356 </span>
+                </li>
+            </ul>
+            </div>
+
+        </div>
+        </div>
+    
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright: <strong>Divyansh Bhatt </strong>. All Right Reserved
+        </div>
+    </footer>
+    
+    </div>
+    <script>
+        function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
 </body>
 </html>
