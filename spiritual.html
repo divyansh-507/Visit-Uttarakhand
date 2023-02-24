@@ -96,8 +96,8 @@
         /* Expanding image text */
         #imgtext {
             position: absolute;
-            bottom: 15px;
-            left: 15px;
+            bottom: 50px;
+            left: 450px;
             color: white;
             font-size: 30px;
             font-family: "Satisfy", sans-serif;
@@ -108,7 +108,7 @@
         .closebtn {
             position: absolute;
             top: 10px;
-            right: 15px;
+            right: 25px;
             color: white;
             font-size: 35px;
             cursor: pointer;
@@ -142,7 +142,30 @@
             color: brown;
             margin-bottom: 30px;
         }
+        .bg-text {
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 80%;
+            padding: 20px;
+            text-align: center;
+        }
         .gallary{
+            background-image: url(images/social-media-background-image.jpg);
+            height:100%;
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size: cover;
+             /* Add the blur effect */
+            /* filter: blur(8px);
+            -webkit-filter: blur(8px); */
             margin-top: 90px;
             width: 100%;
             min-height: 100vh;
@@ -152,7 +175,7 @@
         .section {
             margin-top: 50px;
             width: 100%;
-            min-height: 80vh;
+            min-height: 75vh;
             background-color:rgb(254, 237, 224);
             padding-top: 10px;
         }
@@ -197,6 +220,25 @@
         .list-item{
             margin-left: 30px;
         }
+        .bgphoto{
+            margin-top: 50px;
+            width: 100%;
+            min-height: 70vh;
+            background-image: url(images/religious-bg.jpg);
+            height:100%;
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
+        .insidedata{
+            color:rgb(156, 176, 160); 
+            line-height:1.7em; font-size:17px; 
+            font-family:'IBM Plex Sans',sans-serif;
+        }
+        .insidedata:hover{
+            filter: drop-shadow(0 0 0.75rem crimson);
+            filter: brightness(2);
+        }
     </style>
 </head>
 <body>
@@ -222,13 +264,16 @@
                   <a class="nav-link" style="color:#09412c" aria-current="page" href="index.html">Home</a>
                 </li>
                 <li class="nav-item list-item">
-                    <a class="nav-link" style="color:#09412c" href="spiritual.html">Explore</a>
+                    <a class="nav-link" style="color:#09412c" href="spiritual.html">Spiritual</a>
                 </li>
                 <li class="nav-item list-item">
-                    <a class="nav-link" style="color:#09412c" href="#aboutus">About Us</a>
+                    <a class="nav-link" style="color:#09412c" href="adventure.html">Adventures</a>
                 </li>
                 <li class="nav-item list-item">
-                    <a class="nav-link" style="color:#09412c" href="#">Contact Us</a>
+                    <a class="nav-link" style="color:#09412c" href="index.html#aboutus">About Us</a>
+                </li>
+                <li class="nav-item list-item">
+                    <a class="nav-link" style="color:#09412c" href="contactUs.html">Contact Us</a>
                 </li>
               </ul>
             </div>
@@ -244,13 +289,13 @@
       </header>
 
 
-    <section class="section">
+    <section class="section bgphoto" style="background-attachment: fixed; background-position: center;min-height:680px">
         <div class="containers">
             <div class="content-section">
-                <h2 class="h2title">The Panch Kedar (Five parts of Shiva)</h2>
+                <h2 class="h2title" style="color:white">The Panch Kedar (Five parts of Shiva)</h2>
 
                 <div class="content">
-                    <p>
+                    <p class="insidedata">
                         Strewn across the state of Uttarakhand are numerous temples dedicated to several deities of the Hindu pantheon. Located in the Garhwal region
                         of the state are five such revered shrines where Lord Shiva is worshipped. Collectively known as Panch Kedar (panch meaning five), these temples
                         are Kedarnath, Madhmaheshwar, Tungnath, Rudranath, Kalpnath. According to mythology, there are several renditions behind the formations of these five sites.
@@ -328,13 +373,13 @@
         </div>
     </section>
     
-    <section class="section" style="min-height: 60vh;">
+    <section class="section bgphoto" style="background-attachment: fixed; background-position: center;min-height: 60vh;">
         <div class="containers">
             <div class="content-section" style="float:right">
-                <h2 class="h2title">The Panch Badri</h2>
+                <h2 class="h2title" style="color:white">The Panch Badri</h2>
 
                 <div class="content">
-                    <p>
+                    <p class="insidedata">
                         Panch Badri circuit is a combination of temples and religious spots that are dedicated to Lord Vishnu. In Badri kshetra – the region
                         starting from Satopanth about 24 km above Badrinath extending to Nandprayag in the south, there are five temples in this circuit: Vishal 
                         Badri or Badrinath the most well-known temple dedicated to Lord Vishnu, Yogdhyan Badri, Bhavishya Badri, Vridha Badri and Adi Badri.
@@ -411,80 +456,34 @@
 
     <section class="gallary">
         <div class="row justify-content-center scroll" style="margin-left: 30px; margin-right: 30px; text-align: center;">
-            <h2 class="h2title" style="color:rgb(95, 100, 108);">Some Other Popular Religious Destinations</h2>
-            <p>Click on the images below:</p>
+            <h2 class="h2title" style="color:brown;">Some Other Popular Religious Destinations</h2>
+            <h6><strong>Click on the images below:</strong></h6>
         </div>
         
-        <div class="row">
-            <div class="column">
-            <img src="images/surkanda.jpg" alt="Surkanda Devi Temple" height="250px" style="width:100%" onclick="myFunction(this);">
+        <!-- <div class="bg-text"> -->
+            <div class="row">
+                <div class="column">
+                <img src="images/surkanda.jpg" alt="Surkanda Devi Temple" height="250px" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                <img src="images/kartikswami.jpg" alt="Kartik Swami Temple" height="250px" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                <img src="images/hemkund.jpg" alt="Hemkunt Sahib" height="250px" style="width:100%" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                <img src="images/dhari-devi.jpg" alt="Dhari Devi Temple" height="250px" style="width:100%" onclick="myFunction(this);">
+                </div>
             </div>
-            <div class="column">
-            <img src="images/kartikswami.jpg" alt="Kartik Swami Temple" height="250px" style="width:100%" onclick="myFunction(this);">
+            
+            <div class="container">
+                <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+                <img id="expandedImg" style="height:600px;width:100%">
+                <div id="imgtext"></div>
             </div>
-            <div class="column">
-            <img src="images/hemkund.jpg" alt="Hemkunt Sahib" height="250px" style="width:100%" onclick="myFunction(this);">
-            </div>
-            <div class="column">
-            <img src="images/dhari-devi.jpg" alt="Dhari Devi Temple" height="250px" style="width:100%" onclick="myFunction(this);">
-            </div>
-        </div>
-        
-        <div class="container">
-            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-            <img id="expandedImg" style="width:100%">
-            <div id="imgtext"></div>
-        </div>
+        <!-- </div> -->
     </section>
 
-    <div class="container my-5">
-
-        <footer class="text-black  text-lg-start bg-light">
-        
-        <div class="container p-4">
-        <div class="row mt-4">
-            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Insights</h5>
-            <p>
-                Travel and Explore the world. It makes you happier and provides peace of mind.
-            </p>
-    
-            <p>
-                Visit our website and have a great time visiting Uttarakhand and feeling its scenic beauty.
-            </p>
-    
-            <div class="mt-4">
-                <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-facebook-f"></i></a>
-                <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-dribbble"></i></a>
-                <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-twitter"></i></a>
-                <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-google-plus-g"></i></a>
-            </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0" style="margin-left: 1.50em">
-                Contact US
-            <ul class="fa-ul" style="margin-left: 1.65em; margin-top: 20px;">
-                <li class="mb-3">
-                <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Dehradun 248002, India</span>
-                </li>
-                <li class="mb-3">
-                <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">visituttarakhand@gmail.com</span>
-                </li>
-                <li class="mb-3">
-                <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 998 124 356 </span>
-                </li>
-            </ul>
-            </div>
-
-        </div>
-        </div>
-    
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2023 Copyright: Visit Uttarakhand. All Right Reserved
-        </div>
-    </footer>
-    
-    </div>
 
     <script>
         function myFunction(imgs) {
