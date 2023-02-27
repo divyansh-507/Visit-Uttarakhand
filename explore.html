@@ -11,126 +11,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Sacramento&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Julee&family=Satisfy&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-
     <script href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.js"></script>
-    <title>Visit Uttarakhand</title>
+
     <style>
-        #contact {
-            color: white;
-            background-color: #001828;
-            background-image: url(images/contact-us-bg.jpg);
-            background-size:cover;
-            min-height: 800px;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: relative;
-            padding-bottom: 50px;
-            padding-top: 80px;
+        @media only screen and (min-width: 600px) {
+            /* For tablets: */
+            .col-s-1 {width: 8.33%;}
+            .col-s-2 {width: 16.66%;}
+            .col-s-3 {width: 25%;}
+            .col-s-4 {width: 33.33%;}
+            .col-s-5 {width: 41.66%;}
+            .col-s-6 {width: 50%;}
+            .col-s-7 {width: 58.33%;}
+            .col-s-8 {width: 66.66%;}
+            .col-s-9 {width: 75%;}
+            .col-s-10 {width: 83.33%;}
+            .col-s-11 {width: 91.66%;}
+            .col-s-12 {width: 100%;}
         }
-        .tm-section-pad-top {
-            text-align: center;
-            padding-top: 80px;
-            padding-bottom: 40px;
-        }
-        .tm-section-title {
-            font-size: 2.6rem;
-            font-weight: normal;
-        }
-        .tm-input {
-            margin: 0 0 20px 0;
-            width: 60%;
-            padding: 10px 20px;
-            border-radius: 10px;
-            border: 1px solid white;
-            background: transparent;
-            color: white;
-        }
-        .container {
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        [class*="col-"] {
             width: 100%;
-            padding-right: 15px;
-            padding-left: 15px;
-            margin-right: auto;
-            margin-left: auto;
         }
-        body{
-            font-family: "Raleway", sans-serif;
-        }
-        .tm-btn-submit {
-            padding: 8px 32px;
-            font-size: 1em;
-            color: #fff;
-            background-color: rgb(18, 133, 119);
-            width: 50%;
-            margin-bottom: 60px;
-        }
-        .row{
-            margin-right:170px;
-        }
-        .infoo{
-            float:left; 
-            margin-left:400px;
-            font-family: "Raleway", sans-serif;
-            line-height:1.9em;
-            font-size:20px;
-        }
-        .data{
-            text-align:left;
-            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-            line-height:1.9em;
-            font-size:17px;
-        }
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-        .nav-link {
-            box-shadow: inset 0 0 0 0 #54b3d6;
-            color: #54b3d6;
-            padding: 0 .25rem;
-            transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
-            margin-top: 5px;
-            margin-bottom: 15px;
-        }
-        .nav-link:hover {
-            color: #54b3d6;
-            box-shadow: inset 200px 0 0 0 #54b3d6;;
-        }
-        .navbar{
-            color: #0f764e !important;
-            margin-top: 5px;
-            margin-bottom: 15px;
-        }
-        .visit{
-            margin-left: 40px;
-            display: inline;            
-            font-family: "Satisfy", sans-serif;
-            color:rgb(144, 37, 37);
-            
-        }
-        .utt{
-            font-family: "Satisfy", sans-serif;
-            color:#8b4d1e;
-        }
-        /* Presentational styles */
-        .nav-link {
-        color: #54b3d6;
-        font-family: 'Poppins', sans-serif;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 1.5;
-        text-decoration:none;
         }
         .section {
             margin-top: 80px;
             margin-bottom:80px;
+            /* margin-left: 100px; */
+            /* margin-right: 100px; */
             width: 100%;
             padding:100px,100px,100px,100px;
-            background-image: url(images/contactus.jpg);
-            
+        }
+        .carousel-image{
+            height:630px;
+            width: fit-content;
         }
         .nav-link {
             box-shadow: inset 0 0 0 0 #54b3d6;
@@ -146,12 +81,12 @@
         }
 
         .nav-link {
-        color: #54b3d6;
-        font-family: 'Poppins', sans-serif;
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 1.5;
-        text-decoration:none;
+            color: #54b3d6;
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.5;
+            text-decoration:none;
         }
         .containers {
             width: 80%;
@@ -178,7 +113,25 @@
         .list-item{
             margin-left: 30px;
         }
-        
+        #imgtext {
+            position: absolute;
+            bottom: 40px;
+            left: 40px;
+            color: white;
+            font-size: 25px;
+            font-family: "Satisfy", sans-serif;
+            font-weight: bolder;
+        }
+
+        /* Closable button inside the expanded image */
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
         .h2title{
             margin-left: 170px;
             text-align: left;
@@ -188,98 +141,267 @@
             color: rgb(0, 0, 0);
             margin-bottom: 30px;
         }
+        .Cssection{
+            line-height: 1.8;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            margin-left:170px;
+            margin-right:170px;
+        }
+        .adventureimg{
+            margin-left:170px;
+            float:left;
+        }
+        .infoblock{
+            margin-top:250px;
+            float:right;
+            text-align:center;
+        }
+        .container {
+            position: relative;
+            display: none;
+        }
+        #expapdedImg{
+            border-radius: 10px;
+            opacity: 0.7; 
+            cursor: pointer;
+        }
+        .gallary{
+            background-image: url(images/social-media-background-image.jpg);
+            height:100%;
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-attachment: fixed; 
+            background-position: center;
+             /* Add the blur effect */
+            /* filter: blur(8px);
+            -webkit-filter: blur(8px); */
+            margin-top: 90px;
+            width: 100%;
+            min-height: 100vh;
+            background-color:rgb(153, 169, 176);
+            padding-top: 50px;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .column {
+            float: left;
+            width: 22%;
+            padding: 10px;
+            margin-left: 35px;
+            margin-bottom: 50px;
+        }
+
+        /* Style the images inside the grid */
+        .column img {
+            border-radius: 10px;
+            opacity: 0.8; 
+            cursor: pointer;
+            filter: drop-shadow(5px 10px 5px rgb(27, 41, 27)); 
+        }
+        .column img:hover {
+            opacity: 1;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .form-popup {
+            display: none;
+            position: fixed;
+            top: 100px;
+            right:15px;
+            border: 3px solid #f1f1f1;
+            z-index: 9;
+      }
+
+        /* Add styles to the form container */
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container input[type=text], .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit/login button */
+        .form-container .buttonn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom:10px;
+            opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .form-container .cancel {
+            margin-left:30px;
+            background-color: rgb(0, 0, 0);
+            height:10px;
+            width:10%;
+            color:rgb(255, 255, 255);
+        }
+
+        /* Add some hover effects to buttons */
+        .form-container .button:hover, .open-button:hover {
+            opacity: 1;
+        }
+        
+        .verdanainfo{
+            line-height: 1.5em;
+            font-size: 16px; 
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .insidedata{
+            color:rgb(156, 176, 160); 
+            line-height:1.7em; font-size:17px; 
+            font-family:'IBM Plex Sans',sans-serif;
+        }
+        .insidedata:hover{
+            filter: drop-shadow(0 0 0.75rem rgb(13, 198, 47));
+            /* filter: brightness(1); */
+        }
+        .adventureimg{
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+        .area {
+            position: relative;
+            width: 50%;
+            margin-bottom:100px;
+        }
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            margin-top:100px;
+            margin-left:100px;
+            top: 20%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .text {
+            background-color: #04AA6D;
+            margin-top:300px;
+            margin-left:172px;
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+        }
+        .area:hover .adventureimg {
+            opacity: 0.3;
+        }
+
+        .area:hover .middle {
+            opacity: 1;
+        }
+        .Csection{
+            line-height: 1.8;
+            margin-top: 600px;
+            margin-bottom: 15px;
+            margin-left:170px;
+            margin-right:170px;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark d-none d-lg-block" style="z-index: 2000;">
-          <div class="container-fluid">
-            <!-- Navbar brand -->
-            <a class="navbar-brand nav-link" target="_blank" href="index.html">
-                 <h3 class="visit"> visit</h3>
-                 <h3 class="utt"> Uttarakhand</h3>
-            </a>
-            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarExample01"
-              aria-controls="navbarExample01" aria-expanded="false" aria-label="Toggle navigation">
-              <i class="fas fa-bars"></i>
-            </button>
-            <img src="images/uttarakhand.png" width="100" height="70" style="margin-bottom:20px" class="d-inline-block align-top" alt="">
-            
-            <div class="collapse navbar-collapse" id="navbarExample01" style="margin-left:350px">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item list-item active">
-                  <a class="nav-link" style="color:#09412c" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item list-item">
-                    <a class="nav-link" style="color:#09412c" href="spiritual.html">Spiritual</a>
-                </li>
-                <li class="nav-item list-item">
-                    <a class="nav-link" style="color:#09412c" href="adventure.html">Adventures</a>
-                </li>
-                <li class="nav-item list-item">
-                    <a class="nav-link" style="color:#09412c" href="#aboutus">About Us</a>
-                </li>
-                <li class="nav-item list-item">
-                    <a class="nav-link" style="color:#09412c" href="#">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-            <a href="#" class="btn btn-primary" style="margin-bottom: 20px;">Log In</a>
-          </div>
-        </nav>
 
-      </header>
-    <section id="contact" class="tm-section-pad-top tm-parallax-2" style="background-attachment: fixed; background-position: center" >
-        <div class="row" style="display:inline">
-            <div class="text-center col-12">
-                <h2 class="tm-section-title mb-4">
-                    Contact Us
-                </h2>
-                <p class="mb-5" style="margin-bottom:30px">
-                    Travel Uttarakhand, explore places, get to know the culture and visit again
-                </p>
-            </div>
-            <div class="col-sm-12 col-md-6" style="float:right">
-                <form action="" method="get">
-                    <div>
-                        <input id="name" name="name" type="text" placeholder="Enter your name" class="tm-input" required>
-                    </div>
-                    <div>
-                        <input id="email" name="email" type="email" placeholder="Enter your Email address" class="tm-input" required>
-                    </div>
-                    <div>
-                        <textarea name="message" id="message" cols="60" rows="12" class="tm-input" required></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="btn tm-btn-submit">Submit</button>
-                    </div>
-                    
-                </form>
+    <section class="section">
+        <h3 class="h2title">
+            1.  Paragliding - Touch The Skies
+        </h3>
 
+        <div class="area">
+            <img src="images/paragliding.jpg" alt="paragliding" class="adventureimg" height="600px">
+            <div class="middle">
+              <div class="text">
+                <p class="verdanainfo"><strong>Location</strong>: Mukteswar and Ranikhet</p>
+                <p class="verdanainfo"><strong>Starts from</strong>: INR 1,500 to 3,000</p>
+                <p class="verdanainfo"><strong>Best time</strong>: January to March</p>
+              </div>
             </div>
         </div>
-        <div class="infoo">
-            <p class="data">
-                <img src="images/icons8-ringer-volume-48.png" alt="Tel" height="30px" widht="30px">
-                <strong style="font-size: 22px;">Telephone : </strong><br/> 
-                +998 124 356<br/>
-                            <br/>
-                            <br/>
-                <img src="images/icons8-user-location-100.png" alt="Tel" height="30px" widht="30px">
-                <strong style="font-size: 22px;">Address : </strong><br/> 
-                   Abc ganj Colony,<br/>
-                   Dariya Wala Bagh<br/>
-                   jogiwala Dehradun<br/>
-                                <br/>
-                                <br/>
-                <img src="images/icons8-composing-mail-48.png" alt="Tel" height="30px" widht="30px">
-                <strong style="font-size: 22px;">Official Support</strong><br/>
-                visituttarakhand@gmail.com
 
+        <div class="Csection">    
+            <p class="insidedata" style="background-image: url(images/kuchtohai.jpg);
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
+                The rush of flying alongside hawk eye perspective on the lavish encompassing and mountainscape as the adrenaline surge takes over as you paraglide
+                in Uttarakhand. No big surprise taking off high like a falcon is a fixation among the experience which is unique. Even though not one of the most 
+                prevalent spots for paragliding in India, Uttarakhand offers abundant operations for paragliding for those looking for the rush of flying. The best 
+                thing about paragliding in Uttarakhand is that you don’t require earlier information on paragliding as pair paragliding flights are offered via prepared 
+                specialists at Mukteshwar and Ranikhet, are the two most famous spots for paragliding in Uttarakhand.
             </p>
-            
         </div>
     </section>
+        <!-- <div class="content">
+            <img class="adventureimg" src="images/paragliding.jpg" alt="paragliding" height="450px">
+            <p class="infoblock">
+                <p class="verdanainfo"><strong>Location</strong>: Mukteswar and Ranikhet</p>
+                <p class="verdanainfo"><strong>Starts from</strong>: INR 1,500 to 3,000</p>
+                <p class="verdanainfo"><strong>Best time</strong>: January to March</p>
+            </p>
+            <div class="Csection">    
+                <p class="insidedata" style="background-image: url(images/kuchtohai.jpg);
+                background-position: center;
+                background-repeat:no-repeat;
+                background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
+                    The rush of flying alongside hawk eye perspective on the lavish encompassing and mountainscape as the adrenaline surge takes over as you paraglide
+                    in Uttarakhand. No big surprise taking off high like a falcon is a fixation among the experience which is unique. Even though not one of the most 
+                    prevalent spots for paragliding in India, Uttarakhand offers abundant operations for paragliding for those looking for the rush of flying. The best 
+                    thing about paragliding in Uttarakhand is that you don’t require earlier information on paragliding as pair paragliding flights are offered via prepared 
+                    specialists at Mukteshwar and Ranikhet, are the two most famous spots for paragliding in Uttarakhand.
+                </p>
+            </div>
+        </div> -->
+
+
+    <script>
+        function myFunction(imgs) {
+          var expandImg = document.getElementById("expandedImg");
+          var imgText = document.getElementById("imgtext");
+          expandImg.src = imgs.src;
+          imgText.innerHTML = imgs.alt;
+          expandImg.parentElement.style.display = "block";
+        }
+
+        function openForm() {
+        document.getElementById("myForm").style.display = "block";
+      }
+
+      function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+      }
+    </script>
 </body>
 </html>

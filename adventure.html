@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Sacramento&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Julee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Julee&family=Satisfy&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -291,6 +291,63 @@
             filter: drop-shadow(0 0 0.75rem rgb(13, 198, 47));
             /* filter: brightness(1); */
         }
+        .adventureimg{
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+        .area {
+            position: relative;
+            width: 50%;
+            margin-bottom:100px;
+        }
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            margin-top:100px;
+            margin-left:100px;
+            top: 20%;
+            left: 20%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .text {
+            background-color: #04AA6D;
+            margin-top:300px;
+            margin-left:172px;
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+        }
+        .area:hover .adventureimg {
+            opacity: 0.3;
+        }
+
+        .area:hover .middle {
+            opacity: 1;
+        }
+        .Csection{
+            line-height: 1.8;
+            margin-top: 600px;
+            margin-bottom: 15px;
+            margin-left:170px;
+            margin-right:170px;
+        }
+        .bgphoto{
+            margin-top: 50px;
+            width: 100%;
+            min-height: fit-content;
+            background-image: url(images/adventure-bg.jpg);
+            height:100%;
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size: cover;
+        }
     </style>
 </head>
 <body>
@@ -402,161 +459,180 @@
 
       </header>
 
-      <section class="section">
-        <h2 class="h2title">Feel the Thrill</h2>
-        <div class="Cssection">
-            <p class="verdanainfo">
-                Uttarakhand is the ultimate adventure destination and the answer to all your thrill-seeking woes lies here. Bestowed with snow-carpeted slopes
-                ideal for high-altitude skiing; the Himalayan ranges for trekking, mountaineering and rock climbing; gurgling rivers for white water rafting, pristine 
-                lakes for canoeing and kayaking, and mountain paths best suited for biking challenges - there is no dearth of adventure sports here.
-            </p>
-            <h5 class="h2title" style="margin-top:40px; text-align: left; margin-left:0px; color:brown">
-                Here is a list of adventure sports that you can do and rush your adranaline in Uttarakhand ...
-            </h5>
+      <section class="section bgphoto" style="background-attachment: fixed; background-position: center;min-height: 320px;">
+        <div style="padding-top: 40px;"class="insidedata">
+            <h2 class="h2title" style="color:white">Feel the Thrill</h2>
+            <div class="Cssection">
+                <p class="verdanainfo" style="color:white">
+                    Uttarakhand is the ultimate adventure destination and the answer to all your thrill-seeking woes lies here. Bestowed with snow-carpeted slopes
+                    ideal for high-altitude skiing; the Himalayan ranges for trekking, mountaineering and rock climbing; gurgling rivers for white water rafting, pristine 
+                    lakes for canoeing and kayaking, and mountain paths best suited for biking challenges - there is no dearth of adventure sports here.
+                </p>
+                <h5 class="h2title" style="margin-top:40px; text-align: left; margin-left:0px; color:brown; color:white">
+                    Here is a list of adventure sports that you can do and rush your adranaline in Uttarakhand ...
+                </h5>
+            </div>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" style="padding-top:40px">
         <h3 class="h2title">
             1.  Paragliding - Touch The Skies
         </h3>
 
-        <div class="content">
-            <img class="adventureimg" src="images/paragliding.jpg" alt="paragliding" height="450px">
-            <p class="infoblock">
+        <div class="area">
+            <img src="images/paragliding.jpg" alt="paragliding" class="adventureimg" height="600px">
+            <div class="middle">
+              <div class="text">
                 <p class="verdanainfo"><strong>Location</strong>: Mukteswar and Ranikhet</p>
                 <p class="verdanainfo"><strong>Starts from</strong>: INR 1,500 to 3,000</p>
                 <p class="verdanainfo"><strong>Best time</strong>: January to March</p>
-            </p>
-            <div class="Csection">    
-                <p class="insidedata" style="background-image: url(images/kuchtohai.jpg);
-                background-position: center;
-                background-repeat:no-repeat;
-                background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
-                    The rush of flying alongside hawk eye perspective on the lavish encompassing and mountainscape as the adrenaline surge takes over as you paraglide
-                    in Uttarakhand. No big surprise taking off high like a falcon is a fixation among the experience which is unique. Even though not one of the most 
-                    prevalent spots for paragliding in India, Uttarakhand offers abundant operations for paragliding for those looking for the rush of flying. The best 
-                    thing about paragliding in Uttarakhand is that you don’t require earlier information on paragliding as pair paragliding flights are offered via prepared 
-                    specialists at Mukteshwar and Ranikhet, are the two most famous spots for paragliding in Uttarakhand.
-                </p>
+              </div>
             </div>
         </div>
-      </section>
 
+        <div class="Csection">    
+            <p class="insidedata" style="background-image: url(images/adventure-bg.jpg);
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
+                The rush of flying alongside hawk eye perspective on the lavish encompassing and mountainscape as the adrenaline surge takes over as you paraglide
+                in Uttarakhand. No big surprise taking off high like a falcon is a fixation among the experience which is unique. Even though not one of the most 
+                prevalent spots for paragliding in India, Uttarakhand offers abundant operations for paragliding for those looking for the rush of flying. The best 
+                thing about paragliding in Uttarakhand is that you don’t require earlier information on paragliding as pair paragliding flights are offered via prepared 
+                specialists at Mukteshwar and Ranikhet, are the two most famous spots for paragliding in Uttarakhand.
+            </p>
+        </div>
+    </section>
 
-      <section class="section">
+    <section class="section">
         <h3 class="h2title">
             2.  White Water Rafting - Swoosh Through The Water
         </h3>
 
-        <div class="content">:
-            <img class="adventureimg" src="images/rafting-content.jpeg" alt="paragliding" height="450px">
-            <p class="infoblock">
+        <div class="area">
+            <img src="images/rafting.jpg" alt="paragliding" class="adventureimg" height="600px">
+            <div class="middle">
+              <div class="text">
                 <p class="verdanainfo"><strong>Location</strong>: Rishikesh</p>
                 <p class="verdanainfo"><strong>Starts from</strong>: INR 700 to 2,000</p>
                 <p class="verdanainfo"><strong>Best time</strong>: Before Monsoon(July-August)</p>
-            </p>
-            <div class="Csection">    
-                <p class="insidedata" style="background-image: url(images/kuchtohai.jpg);
-                background-position: center;
-                background-repeat:no-repeat;
-                background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
-                    Uttarakhand, with gurgling rivers like Ganga, Yamuna, Alaknanda, Tons, Kali, Kosi and many more, is the ultimate 
-                    white water rafting destination. Between braving the currents and gently floating, rafting in Uttarakhand can be 
-                    experienced by the novice, the experienced and even non-swimmers. Along with rafting you can also try cliff jumping.Shivpuri 
-                    aslo hosts camping near the banks along with white water rafting which makes a great weekend getaway.
-                </p>
+              </div>
             </div>
         </div>
-      </section>
 
-      <section class="section">
+        <div class="Csection" style="margin-top:530px">    
+            <p class="insidedata" style="background-image: url(images/adventure-bg.jpg);
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
+                Uttarakhand, with gurgling rivers like Ganga, Yamuna, Alaknanda, Tons, Kali, Kosi and many more, is the ultimate 
+                white water rafting destination. Between braving the currents and gently floating, rafting in Uttarakhand can be 
+                experienced by the novice, the experienced and even non-swimmers. Along with rafting you can also try cliff jumping.Shivpuri 
+                also hosts camping near the banks along with white water rafting which makes a great weekend getaway.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="section">
         <h3 class="h2title">
             3.  Skiing - Slide Down The Snow
         </h3>
 
-        <div class="content">:
-            <img class="adventureimg" src="images/skiing-content.jpg" alt="paragliding" height="450px">
-            <p class="infoblock">
+        <div class="area">
+            <img src="images/skiing-content.jpg" alt="paragliding" class="adventureimg" height="600px">
+            <div class="middle">
+              <div class="text">
                 <p class="verdanainfo"><strong>Location</strong>: Auli, Dayara bugyal and Munsyari</p>
                 <p class="verdanainfo"><strong>Starts from</strong>: INR 900 to 2,000</p>
                 <p class="verdanainfo"><strong>Best time</strong>: November to February</p>
-            </p>
-            <div class="Csection">    
-                <p class="insidedata" style="background-image: url(images/kuchtohai.jpg);
-                background-position: center;
-                background-repeat:no-repeat;
-                background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
-                    Skiing is one of the most enthralling adventure activities in Uttarakhand which one can enjoy. That passion for 
-                    sliding over the land of snow is a different experience entirely. Auli in Uttarakhand is popularly called the ski 
-                    capital of India, suited to both beginners and the seasoned. The snow-covered mountain peaks of Auli are the 
-                    best to experience this thrilling activity. One can enjoy the experience of gliding down the snow-bed or otherwise 
-                    take classes for mastering the art of skiing.
-                </p>
+              </div>
             </div>
         </div>
-      </section>
 
-      <section class="section">
+        <div class="Csection">    
+            <p class="insidedata" style="background-image: url(images/adventure-bg.jpg);
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
+                Skiing is one of the most enthralling adventure activities in Uttarakhand which one can enjoy. That passion for 
+                sliding over the land of snow is a different experience entirely. Auli in Uttarakhand is popularly called the ski 
+                capital of India, suited to both beginners and the seasoned. The snow-covered mountain peaks of Auli are the 
+                best to experience this thrilling activity. One can enjoy the experience of gliding down the snow-bed or otherwise 
+                take classes for mastering the art of skiing.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
         <h3 class="h2title">
             4. Mountain Biking - Cross the Mountains
         </h3>
 
-        <div class="content">:
-            <img class="adventureimg" src="images/mountain-biking.jpg" alt="paragliding" height="450px">
-            <p class="infoblock">
+        <div class="area">
+            <img src="images/mountain-biking.jpg" alt="paragliding" class="adventureimg" height="600px">
+            <div class="middle">
+              <div class="text">
                 <p class="verdanainfo"><strong>Location</strong>: Mussorie, Khirsu, Nainital, Sattal</p>
                 <p class="verdanainfo"><strong>Starts from</strong>: INR 1000 to 2,000</p>
                 <p class="verdanainfo"><strong>Best time</strong>: All over the year</p>
-            </p>
-            <div class="Csection">    
-                <p class="insidedata" style="background-image: url(images/kuchtohai.jpg);
-                background-position: center;
-                background-repeat:no-repeat;
-                background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
-                    Uttarakhand's diverse terrain offers several challenging routes for mountain biking. 
-                    A very popular sport in the state, there are trails for beginners and professionals alike. 
-                    In fact, the annual Ultimate Mountain Terrain Biking Championship, which is said to be Asia’s 
-                    longest mountain bike race, is held here and draws participants from across the world.
-                </p>
+              </div>
             </div>
         </div>
-      </section>
 
-      <section class="section">
+        <div class="Csection">    
+            <p class="insidedata" style="background-image: url(images/adventure-bg.jpg);
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
+                Uttarakhand's diverse terrain offers several challenging routes for mountain biking. 
+                A very popular sport in the state, there are trails for beginners and professionals alike. 
+                In fact, the annual Ultimate Mountain Terrain Biking Championship, which is said to be Asia’s 
+                longest mountain bike race, is held here and draws participants from across the world.
+            </p>
+        </div>
+    </section>
+
+    
+
+    <section class="section">
         <h3 class="h2title">
             5. Trekking - Walk Through The Jungles
         </h3>
 
-        <div class="content">:
-            <img class="adventureimg" src="images/trek.pg.jpg" alt="paragliding" height="450px">
-            <p class="infoblock">
+        <div class="area">
+            <img src="images/trek.pg.jpg" alt="paragliding" class="adventureimg" height="600px">
+            <div class="middle">
+              <div class="text">
                 <p class="verdanainfo"><strong>Location</strong>: Bedni Bugyal, Kauri Pass, Har ki Dun, Deoriatal-Chandrashila, Dodital, Roop Kund, Hem Kund</p>
                 <p class="verdanainfo"><strong>Starts from</strong>: INR 1200 to 3,000</p>
                 <p class="verdanainfo"><strong>Best time</strong>: Allmost All Seasons</p>
-            </p>
-            <div class="Csection">    
-                <p class="insidedata" style="background-image: url(images/kuchtohai.jpg);
-                background-position: center;
-                background-repeat:no-repeat;
-                background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
-                    The most beautiful Himalayan pinnacles and mountain trails changing from simple to intense evaluation, Uttarakhand is one of 
-                    the most well-known trekking goals in India among the experience seekers. Trekking in Uttarakhand, Himalayas is additionally 
-                    prevalent for what it’s worth as much an undertaking as it is a profound experience. The World Heritage trail of Valley of Flowers 
-                    joined with otherworldly Hemkund Sahib is prominent during the storm. While the snow loaded Nag Tibba summit is well known during winters, 
-                    there all-season treks to Deoriatal – Chopta – Tungnath – Chandrashila. Truth be told, there is no lack of trekking courses in Uttarakhand 
-                    for those anticipating experience joined with delight.
-                </p>
+              </div>
             </div>
         </div>
-      </section>
+
+        <div class="Csection" style="margin-top:500px">    
+            <p class="insidedata" style="background-image: url(images/adventure-bg.jpg);
+            background-position: center;
+            background-repeat:no-repeat;
+            background-size: cover; color:rgb(255, 255, 255);border-radius: 25px; padding:20px;background-attachment: fixed; background-position: center"">
+                The most beautiful Himalayan pinnacles and mountain trails changing from simple to intense evaluation, Uttarakhand is one of 
+                the most well-known trekking goals in India among the experience seekers. Trekking in Uttarakhand, Himalayas is additionally 
+                prevalent for what it’s worth as much an undertaking as it is a profound experience. The World Heritage trail of Valley of Flowers 
+                joined with otherworldly Hemkund Sahib is prominent during the storm. While the snow loaded Nag Tibba summit is well known during winters, 
+                there all-season treks to Deoriatal – Chopta – Tungnath – Chandrashila. Truth be told, there is no lack of trekking courses in Uttarakhand 
+                for those anticipating experience joined with delight.
+            </p>
+        </div>
+    </section>
 
       
 
-      <section class="gallary" style="background-attachment: fixed; background-position: center">
+      <section class="gallary bgphoto" style="background-attachment: fixed; background-position: center;min-height: 320px;">
         <div class="row justify-content-center scroll" style="margin-left: 30px; margin-right: 30px; text-align: center;">
-            <h2 class="h2title" style="color:brown; text-align: center;">Some Other Popular Trekking Destinations</h2>
-            <h6><strong>Click on the images below:</strong></h6>
+            <h2 class="h2title" style="color:rgb(255, 255, 255); text-align: center;">Some Other Popular Trekking Destinations</h2>
+            <h6 style="color:white"><strong>Click on the images below:</strong></h6>
         </div>
     
         <div class="row" >
@@ -579,6 +655,77 @@
             <div id="imgtext"></div>
         </div>
     </section>
+
+    <div class="my-5" style="width:75%; margin-left:200px">
+
+        <footer class="text-black  text-lg-start bg-light">
+        
+        <div class="p-4">
+        <div class="row mt-4">
+
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <a href="index.html" style="text-decoration: none;">
+                    <h3 class="visit" style="text-shadow: 3px 3px 3px #c3c3c3;color:grey"> visit</h3>
+                    <h3 class="utt" style="text-shadow: 3px 3px 3px #c3c3c3;color:grey;"> Uttarakhand</h3>
+                </a>
+                <div>
+                    <p style="font-family:'IBM Plex Sans',sans-serif;margin-top: 15px;margin-bottom: 15px; color:black">Spirit, Beauty & Life</p>
+                    <div>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-facebook-f fa-stack-1x fa-inverse"></i>
+                        </span>
+
+                        <!-- Twitter -->
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+
+                        <!-- Instagram -->
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4"><a href="contactUs.html" style="color:grey;margin-left:15px;">Contact US</a></h5>
+                <ul class="fa-ul" style=" margin-top: 20px;">
+                    <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Dehradun 248002, India</span>
+                    </li>
+                    <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">visituttarakhand@gmail.com</span>
+                    </li>
+                    <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 998 124 356 </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4" style="color:grey">Insights</h5>
+                <p>
+                    Travel and Explore. It makes you happier and provides peace of mind.
+                </p>
+        
+                <p>
+                    Visit our website and have a great time visiting Uttarakhand and feeling its scenic beauty.
+                </p>
+            </div>
+
+        </div>
+        </div>
+    
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2023 Copyright: <strong>Divyansh Bhatt </strong>. All Right Reserved
+        </div>
+    </footer>
+    
+    </div>
 
     <script>
         function myFunction(imgs) {

@@ -13,7 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Julee&family=Satisfy&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -93,6 +94,44 @@
             padding-left: 15px;
             margin-right: auto;
             margin-left: auto;
+        }
+        .container .card:hover
+        {
+            height: 380px;
+        }
+        .card .container .imgContainer
+        {
+            position: relative;
+            width:250px;
+            height:250px;
+            top:-50px;
+            left:10px;
+            z-index: 1;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+        .container .card .imgContainer img
+        {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+        .container .card .content
+        {
+            position: relative;
+            margin-top: -140px;
+            padding: 10px 15px;
+            text-align: center;
+            color:#111;
+            visibility: hidden;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s ease-in-out;
+        }
+        .container .card:hover .content
+        {
+            visibility: visible;
+            opacity: 1;
+            margin-top: -40px;
+            transition-delay: 0.3s;
         }
         body{
             font-family: "Raleway", sans-serif;
@@ -388,43 +427,65 @@
         </div>
     </section>
 
-    <div class="container my-5">
+    <div class="my-5" style="width:75%; margin-left:200px">
 
         <footer class="text-black  text-lg-start bg-light">
         
-        <div class="container p-4">
+        <div class="p-4">
         <div class="row mt-4">
+
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <a href="index.html" style="text-decoration: none;">
+                    <h3 class="visit" style="text-shadow: 3px 3px 3px #c3c3c3;color:grey"> visit</h3>
+                    <h3 class="utt" style="text-shadow: 3px 3px 3px #c3c3c3;color:grey;"> Uttarakhand</h3>
+                </a>
+                <div>
+                    <p style="font-family:'IBM Plex Sans',sans-serif;margin-top: 15px;margin-bottom: 15px; color:black">Spirit, Beauty & Life</p>
+                    <div>
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-facebook-f fa-stack-1x fa-inverse"></i>
+                        </span>
+
+                        <!-- Twitter -->
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+
+                        <!-- Instagram -->
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-4"><a href="contactUs.html" style="color:grey;margin-left:15px;">Contact US</a></h5>
+                <ul class="fa-ul" style=" margin-top: 20px;">
+                    <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Dehradun 248002, India</span>
+                    </li>
+                    <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">visituttarakhand@gmail.com</span>
+                    </li>
+                    <li class="mb-3">
+                    <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 998 124 356 </span>
+                    </li>
+                </ul>
+            </div>
+
             <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Insights</h5>
-            <p>
-                Travel and Explore. It makes you happier and provides peace of mind.
-            </p>
-    
-            <p>
-                Visit our website and have a great time visiting Uttarakhand and feeling its scenic beauty.
-            </p>
-    
-            <div class="mt-4">
-                <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-facebook-f"></i></a>
-                <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-dribbble"></i></a>
-                <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-twitter"></i></a>
-                <a type="button" class="btn btn-floating btn-primary btn-lg"><i class="fab fa-google-plus-g"></i></a>
-            </div>
-            </div>
-    
-            <div class="col-lg-4 col-md-6 mb-4 mb-md-0" style="margin-left: 1.50em">
-            <h5 class="text-uppercase mb-4"><a href="contactUs.html" style="color:black;margin-left:40px">Contact US</a></h5>
-            <ul class="fa-ul" style="margin-left: 1.65em; margin-top: 20px;">
-                <li class="mb-3">
-                <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">Dehradun 248002, India</span>
-                </li>
-                <li class="mb-3">
-                <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">visituttarakhand@gmail.com</span>
-                </li>
-                <li class="mb-3">
-                <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">+ 998 124 356 </span>
-                </li>
-            </ul>
+                <h5 class="text-uppercase mb-4" style="color:grey">Insights</h5>
+                <p>
+                    Travel and Explore. It makes you happier and provides peace of mind.
+                </p>
+        
+                <p>
+                    Visit our website and have a great time visiting Uttarakhand and feeling its scenic beauty.
+                </p>
             </div>
 
         </div>
@@ -434,6 +495,8 @@
         © 2023 Copyright: <strong>Divyansh Bhatt </strong>. All Right Reserved
         </div>
     </footer>
+    
+    </div>
     
     </div>
     <script>
